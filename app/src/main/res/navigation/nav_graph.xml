@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentSuperheroes">
+
+    <fragment
+        android:id="@+id/fragmentSuperheroes"
+        android:name="com.example.usetech2.ui.superheroeslist.SuperheroesFragment"
+        android:label="Superheroes"
+        tools:layout="@layout/fragment_superheroes">
+        <action
+            android:id="@+id/action_superheroes_to_biography"
+            app:destination="@id/fragmentBiography" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentBiography"
+        android:name="com.example.usetech2.ui.superheroesbiography.SuperheroBiography"
+        android:label="Biography"
+        tools:layout="@layout/fragment_superhero_biography">
+        <argument
+            android:name="ivmage"
+            app:argType="string" />
+        <argument
+            android:name="tvName"
+            app:argType="string" />
+        <argument
+            android:name="tvAllies"
+            app:argType="string" />
+        <argument
+            android:name="tvWork"
+            app:argType="string" />
+        <argument
+            android:name="tvFullName"
+            app:argType="string" />
+        <argument
+            android:name="tvRelatives"
+            app:argType="string" />
+    </fragment>
+</navigation>
